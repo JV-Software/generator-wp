@@ -164,6 +164,17 @@ WpGenerator.prototype.askForMore = function askForMore() {
                 }
                 return true;
             }
+        },
+        {
+            name     : 'dbPrefix',
+            message  : 'What\'s the database tables prefix?',
+            default  : 'wp_',
+            validate : function (input) {
+                if (!input) {
+                    return 'Database prefix can\'t be empty';
+                }
+                return true;
+            }
         }
     ];
 
@@ -175,6 +186,7 @@ WpGenerator.prototype.askForMore = function askForMore() {
         this.dbUser        = props.dbUser;
         this.dbPassword    = props.dbPassword;
         this.dbHost        = props.dbHost;
+        this.dbPrefix      = props.dbPrefix;
 
         done();
     }.bind(this));
