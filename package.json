@@ -1,0 +1,41 @@
+{
+  "name": "generator-wp",
+  "version": "1.0.0",
+  "description": "A Yeoman generator for custom WordPress projects",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "homepage": "https://github.com/JV-Software/generator-wp",
+  "bugs": "https://github.com/JV-Software/generator-wp/issues",
+  "author": {
+    "name": "Javier Villanueva",
+    "email": "",
+    "url": "https://github.com/JV-Software"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JV-Software/generator-wp.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.13.4",
+    "ncp": "~0.4.2",
+    "rimraf": "~2.2.2",
+    "mysql": "~2.0.0-alpha9",
+    "simple-git": "~0.2.0",
+    "chalk": "~0.3.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.0"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0-rc.1"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  }
+}
