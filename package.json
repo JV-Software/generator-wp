@@ -1,6 +1,6 @@
 {
   "name": "generator-jvswp",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "A Yeoman generator for custom WordPress projects",
   "keywords": [
     "yeoman-generator"
