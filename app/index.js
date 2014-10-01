@@ -336,15 +336,16 @@ WpGenerator.prototype.createDb = function createDb() {
 
     connection.connect(function (err) {
         if (err) {
-            done(err);
+            self.log.error('Error establishing a database connection, make sure to create the database manually.');
+            done();
         }
-
-        self.log.info('Creating database if it doesn\'t exist');
 
         connection.query('CREATE DATABASE IF NOT EXISTS ' + mysql.escapeId(self.dbName), function (err) {
             if (err) {
                 done(err);
             }
+            
+            self.log.info('Creating database if it doesn\'t exist');
 
             connection.end(function () {
                 done();
